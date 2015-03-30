@@ -6,8 +6,7 @@ requirejs.config
 		jquery: '../vendor/jquery'
 
 define (require) ->
-	underscore = require 'underscore'
-	$ = require 'jquery'
 	GameView = require 'views/game'
 
-	gameInstance = new GameView el: $ 'body > canvas'
+	gameInstance = new GameView
+		el: document.querySelector 'body'
