@@ -1,12 +1,13 @@
 define (require) ->
 	Backbone = require 'backbone'
 	AssetView = require 'views/asset'
-	SectionView = require 'views/section'
+	SnakeView = require 'views/snake'
+	SnakeModel = require 'models/snake'
 
 	class GameView extends Backbone.View
 
 		events:
-			'keydown': 'changeDirection'
+			'keydown': 'changeSnakeDirection'
 
 		initialize: ->
 			@canvas = @el.querySelector '#game'
@@ -15,41 +16,30 @@ define (require) ->
 				el: @el.querySelector '#assets'
 				gridSize: @calculateGridSize()
 
-			@section = new SectionView
-				context: @canvas.getContext '2d'
-				assets: @assets
+			snakeModel = new SnakeModel
 				position:
 					x: 20
 					y: 20
 				gridSize: @calculateGridSize()
 				direction: 'right'
 
-			@speed = 100
+			@snake = new SnakeView
+				model: snakeModel
+				context: @canvas.getContext '2d'
+				assets: @assets
 
-			window.test = @section
+			@speed = 300
 
-			window.gameTimer = setInterval @loop, @speed
-
-			window.loopCount = 0
+			@loopTimer = setInterval @loop, @speed
 
 		calculateGridSize: ->
 			@size =
 				width: @canvas.width / 50
 				height: @canvas.height / 50
 
-		changeDirection: (e) ->
-			KEY_BINDINGS =
-				37: 'left'
-				38: 'up'
-				39: 'right'
-				40: 'down'
-
-			@section.direction = KEY_BINDINGS[e.keyCode]
+		changeSnakeDirection: (e) ->
+			@snake.model.changeDirection e.keyCode
 
 		loop: =>
-			@section.move()
-			@section.render()
-			loopCount++
-
-			if false && loopCount > 5
-				clearTimeout window.gameTimer
+			@snake.model.move()
+			@snake.render()

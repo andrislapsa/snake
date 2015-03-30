@@ -12,9 +12,8 @@ define (require) ->
 				y: 0
 
 			@data = []
-			@data['longPiece'] = @drawLongPiece()
-			@data['cornerPiece'] = @drawCornerPiece()
-			console.log @data
+			@data['horizontalPiece'] = @drawHorizontalPiece()
+			@data['verticalPiece'] = @drawVerticalPiece()
 
 		getCurrentPosition: ->
 			return {
@@ -31,16 +30,15 @@ define (require) ->
 				meta.size.height
 			)
 
-		drawLongPiece: ->
+		drawHorizontalPiece: ->
 			position = @getCurrentPosition()
 			size = @size
-			console.log 'long piece position', position
 
 			@context.fillRect(
 				@position.x
-				@position.y + 1
+				@position.y
 				@size.width
-				@size.height - 2
+				@size.height - 1
 			)
 
 			# update position to mark this place as used
@@ -51,30 +49,45 @@ define (require) ->
 				size: size
 			}
 
-		drawCornerPiece: ->
+		drawVerticalPiece: ->
 			position = @getCurrentPosition()
 			size = @size
 
-			@context.fillStyle = 'rgb(200, 0, 0)'
 			@context.fillRect(
 				@position.x
-				@position.y + 1
+				@position.y
 				@size.width - 1
-				@size.height - 2
-			)
-
-			@context.fillStyle = 'rgb(0, 200, 0)'
-			@context.fillRect(
-				@position.x + 1
-				@position.y + @size.height - 1
-				@size.width - 2
-				1
+				@size.height
 			)
 
 			# update position to mark this place as used
 			@position.x += @size.width
+
 			return {
 				position: position
 				size: size
 			}
 
+		transferToCanvas: (params) ->
+			orientation = if ['up', 'down'].indexOf(params.direction) > -1 then 'vertical' else 'horizontal'
+			pieceData = @data[orientation + 'Piece']
+
+			offsetX = offsetY = 0
+
+			if params.direction == 'right'
+				offsetX = -1
+
+			if params.direction == 'down'
+				offsetY = -1
+
+			params.context.drawImage(
+				@context.canvas
+				pieceData.position.x
+				pieceData.position.y
+				pieceData.size.width
+				pieceData.size.height
+				params.x + offsetX
+				params.y + offsetY
+				@size.width
+				@size.height
+			)
