@@ -27,7 +27,7 @@ define (require) ->
 				context: @canvas.getContext '2d'
 				assets: @assets
 
-			@speed = 300
+			@speed = 200
 
 			@loopTimer = setInterval @loop, @speed
 

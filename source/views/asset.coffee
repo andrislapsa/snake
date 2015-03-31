@@ -68,18 +68,25 @@ define (require) ->
 				size: size
 			}
 
-		transferToCanvas: (params) ->
+		calculateGridToPixels: (gridPosition) ->
+			return {
+				x: gridPosition.x * @size.width
+				y: gridPosition.y * @size.height
+			}
+
+		drawHead: (params) ->
 			orientation = if ['up', 'down'].indexOf(params.direction) > -1 then 'vertical' else 'horizontal'
 			pieceData = @data[orientation + 'Piece']
 
-			params.x *= pieceData.size.width
-			params.y *= pieceData.size.height
+			destinationPosition = @calculateGridToPixels
+				x: params.x
+				y: params.y
 
-			if params.direction == 'right'
-				params.x--
+			if params.direction == 'right' && !params.firstPiece
+				destinationPosition.x--
 
-			if params.direction == 'down'
-				params.y--
+			if params.direction == 'down' && !params.firstPiece
+				destinationPosition.y--
 
 			params.context.drawImage(
 				@context.canvas
@@ -87,8 +94,20 @@ define (require) ->
 				pieceData.position.y
 				pieceData.size.width
 				pieceData.size.height
-				params.x
-				params.y
+				destinationPosition.x
+				destinationPosition.y
+				@size.width
+				@size.height
+			)
+
+		clearTail: (params) ->
+			destinationPosition = @calculateGridToPixels
+				x: params.x
+				y: params.y
+
+			params.context.clearRect(
+				destinationPosition.x
+				destinationPosition.y
 				@size.width
 				@size.height
 			)

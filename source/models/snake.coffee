@@ -1,11 +1,31 @@
 define (require) ->
+	_ = require 'underscore'
 	Backbone = require 'backbone'
 
 	class SnakeModel extends Backbone.Model
 
 		initialize: (params) ->
 			@set 'position', params.position
-			@set 'size', params.gridSize
+			@set 'body', []
+
+		grow: (section) ->
+			@get('body').push
+				x: section.x
+				y: section.y
+
+		logBody: ->
+			body = @get 'body'
+			results = []
+			for i in body
+				results.push "#{i.x}x#{i.y}"
+
+			console.log results
+
+		getHead: ->
+			_.last @get('body')
+
+		eraseTail: ->
+			@get('body').shift()
 
 		changeDirection: (keyCode) ->
 			KEY_BINDINGS =
@@ -26,4 +46,9 @@ define (require) ->
 				when 'right' then position.x++
 				when 'down' then position.y++
 
+			console.log 'position', position
+
+			@grow position
+
 			@set 'position', position
+			@set 'head', position
