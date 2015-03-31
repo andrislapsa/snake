@@ -72,13 +72,14 @@ define (require) ->
 			orientation = if ['up', 'down'].indexOf(params.direction) > -1 then 'vertical' else 'horizontal'
 			pieceData = @data[orientation + 'Piece']
 
-			offsetX = offsetY = 0
+			params.x *= pieceData.size.width
+			params.y *= pieceData.size.height
 
 			if params.direction == 'right'
-				offsetX = -1
+				params.x--
 
 			if params.direction == 'down'
-				offsetY = -1
+				params.y--
 
 			params.context.drawImage(
 				@context.canvas
@@ -86,8 +87,8 @@ define (require) ->
 				pieceData.position.y
 				pieceData.size.width
 				pieceData.size.height
-				params.x + offsetX
-				params.y + offsetY
+				params.x
+				params.y
 				@size.width
 				@size.height
 			)

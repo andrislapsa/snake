@@ -20,8 +20,7 @@ define (require) ->
 				position:
 					x: 20
 					y: 20
-				gridSize: @calculateGridSize()
-				direction: 'right'
+				direction: 'down'
 
 			@snake = new SnakeView
 				model: snakeModel

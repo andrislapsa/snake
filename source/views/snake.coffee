@@ -1,7 +1,7 @@
 define (require) ->
 	Backbone = require 'backbone'
 
-	class SectionView extends Backbone.View
+	class SnakeView extends Backbone.View
 
 		initialize: (params) ->
 			@assets = params.assets

@@ -21,9 +21,9 @@ define (require) ->
 			size = @get 'size'
 
 			switch @get 'direction'
-				when 'left' then position.x -= size.width
-				when 'up' then position.y -= size.height
-				when 'right' then position.x += size.width
-				when 'down' then position.y += size.height
+				when 'left' then position.x--
+				when 'up' then position.y--
+				when 'right' then position.x++
+				when 'down' then position.y++
 
 			@set 'position', position
