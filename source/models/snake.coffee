@@ -34,6 +34,8 @@ define (require) ->
 				39: 'right'
 				40: 'down'
 
+			return if !KEY_BINDINGS[keyCode]
+
 			@set 'direction', KEY_BINDINGS[keyCode]
 
 		move: ->
@@ -46,9 +48,6 @@ define (require) ->
 				when 'right' then position.x++
 				when 'down' then position.y++
 
-			console.log 'position', position
-
 			@grow position
 
 			@set 'position', position
-			@set 'head', position

@@ -4,31 +4,21 @@ define (require) ->
 	class SnakeView extends Backbone.View
 
 		initialize: (params) ->
-			@assets = params.assets
-			@context = params.context
-			@drawingFirstPiece = true
+			@renderer = params.renderer
 
 		render: ->
 			head = @model.getHead()
 
 			if @model.get('body').length > 20
 				tail = @model.eraseTail()
-				console.log 'tail', tail
 				
-				@assets.clearTail(
-					context: @context
+				@renderer.clearTail
 					x: tail.x
 					y: tail.y
-				)
 
-			@model.logBody()
+			# @model.logBody()
 
-			@assets.drawHead(
-				firstPiece: @drawingFirstPiece
-				context: @context
+			@renderer.drawHead
 				x: head.x
 				y: head.y
 				direction: @model.get 'direction'
-			)
-
-			@drawingFirstPiece = false

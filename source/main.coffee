@@ -8,5 +8,5 @@ requirejs.config
 define (require) ->
 	GameView = require 'views/game'
 
-	gameInstance = new GameView
-		el: document.querySelector 'body'
+	window.gameInstance = new GameView
+		el: window
