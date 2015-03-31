@@ -3,14 +3,22 @@ define (require) ->
 	AssetView = require 'views/asset'
 	SnakeView = require 'views/snake'
 	SnakeModel = require 'models/snake'
+	$ = require 'jquery'
 
 	class GameView extends Backbone.View
 
 		events:
 			'keydown': 'changeSnakeDirection'
+			'blur': 'lostFocus'
 
 		initialize: ->
 			@canvas = @el.querySelector '#game'
+
+			$(window).blur =>
+				@pause true
+
+			$(window).focus =>
+				@pause false
 
 			@assets = new AssetView
 				el: @el.querySelector '#assets'
@@ -27,9 +35,9 @@ define (require) ->
 				context: @canvas.getContext '2d'
 				assets: @assets
 
-			@speed = 200
+			@speed = 100
 
-			@loopTimer = setInterval @loop, @speed
+			@pause false
 
 		calculateGridSize: ->
 			@size =
@@ -40,5 +48,15 @@ define (require) ->
 			@snake.model.changeDirection e.keyCode
 
 		loop: =>
+			if !@loopTimer
+				@loopTimer = setInterval @loop, @speed
+
 			@snake.model.move()
 			@snake.render()
+
+		pause: (pause) =>
+			if pause
+				clearTimeout @loopTimer
+				@loopTimer = null
+			else
+				@loop()
