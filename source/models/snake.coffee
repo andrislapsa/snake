@@ -27,16 +27,8 @@ define (require) ->
 		eraseTail: ->
 			@get('body').shift()
 
-		changeDirection: (keyCode) ->
-			KEY_BINDINGS =
-				37: 'left'
-				38: 'up'
-				39: 'right'
-				40: 'down'
-
-			return if !KEY_BINDINGS[keyCode]
-
-			@set 'direction', KEY_BINDINGS[keyCode]
+		changeDirection: (direction) ->
+			@set 'direction', direction
 
 		move: ->
 			position = @get 'position'

@@ -1,0 +1,910 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ti",
+				"timeTillPlayback"
+			],
+			[
+				"time",
+				"timeupdateDone"
+			],
+			[
+				"log",
+				"logVideoEvent"
+			],
+			[
+				"video",
+				"videoElem"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"test",
+				"testRequire"
+			],
+			[
+				"fil",
+				"filename"
+			],
+			[
+				"BEt",
+				"BetspotCollection"
+			],
+			[
+				"show",
+				"showBetSpotHighlighting"
+			],
+			[
+				"Bet",
+				"BetspotCollection"
+			],
+			[
+				"stats",
+				"stats-list"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"books",
+				"bookmarks-background"
+			],
+			[
+				"boo",
+				"bookmarks-background"
+			],
+			[
+				"table",
+				"table-background"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"dec",
+				"decision"
+			],
+			[
+				"ba",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/main.coffee",
+			"settings":
+			{
+				"buffer_size": 245,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/models/renderer.coffee",
+			"settings":
+			{
+				"buffer_size": 1129,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 147.0,
+		"selected_items":
+		[
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javascript",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"stylus",
+				"Set Syntax: Stylus"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"syn json",
+				"Set Syntax: JSON"
+			],
+			[
+				"syntax javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"javascri",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"coffees",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"syntax: js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntax coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"coffe",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"coffee",
+				"Coffee: Run Script"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synt jsx",
+				"Set Syntax: JSX"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"syn xml",
+				"Set Syntax: XML"
+			],
+			[
+				"syn: coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"st css",
+				"Set Syntax: CSS"
+			],
+			[
+				"sy styl",
+				"Set Syntax: Stylus"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"syn java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntax css",
+				"Set Syntax: CSS"
+			],
+			[
+				"syntax styl",
+				"Set Syntax: Stylus"
+			],
+			[
+				"synx css",
+				"Set Syntax: CSS"
+			],
+			[
+				"synx html",
+				"Set Syntax: HTML"
+			],
+			[
+				"synt html",
+				"Set Syntax: HTML"
+			],
+			[
+				"synt: html",
+				"Set Syntax: HTML"
+			],
+			[
+				"synx htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn css",
+				"Set Syntax: CSS"
+			],
+			[
+				"synt ",
+				"Set Syntax: Stylus"
+			],
+			[
+				"syntax sty",
+				"Set Syntax: Stylus"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn cs",
+				"Set Syntax: CSS"
+			],
+			[
+				"syntaxjava",
+				"Set Syntax: JavaScript"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/alapsa/projects/snake/snake.sublime-project",
+		"/Users/alapsa/projects/localization/resources/languages/en.xml",
+		"/Users/alapsa/projects/localization/resources/languages/en/blackjack.xml",
+		"/Users/alapsa/Documents/release.txt",
+		"/Users/alapsa/projects/js-clients/main/js/non-migrated-files.txt",
+		"/Users/alapsa/Desktop/corelog.txt",
+		"/Users/alapsa/Downloads/APPSUP-1099-201503.txt",
+		"/Users/alapsa/projects/video_test/simple.html",
+		"/Users/alapsa/projects/video_test/index.html",
+		"/Users/alapsa/Desktop/non-migrated-files.txt",
+		"/Users/alapsa/Desktop/all-js-files.txt",
+		"/Users/alapsa/Desktop/defined-files.txt",
+		"/Users/alapsa/Desktop/non-defined-js-files.txt",
+		"/Users/alapsa/Desktop/non-defined-files.txt",
+		"/Users/alapsa/projects/mpeg-dash/simple.html",
+		"/Users/alapsa/projects/mpeg-dash/index.html",
+		"/Users/alapsa/projects/mpeg-dash/dash.all.js",
+		"/Users/alapsa/Downloads/index.html",
+		"/Users/alapsa/Desktop/var playbackMethod = function (method, stream) {",
+		"/Users/alapsa/Downloads/playlist (1).m3u",
+		"/Users/alapsa/Documents/dnsupdate.sh",
+		"/Users/alapsa/Downloads/dnsupdate.sh",
+		"/Users/alapsa/aaa.patch",
+		"/Users/alapsa/playlist",
+		"/private/var/folders/s8/yh_h989965j381vvg9ffrn5m0000gn/T/fz3temp-1/admin_index.ctp",
+		"/private/var/folders/s8/yh_h989965j381vvg9ffrn5m0000gn/T/fz3temp-1/admin_edit.ctp",
+		"/Users/alapsa/Desktop/hls_playback.txt",
+		"/Users/alapsa/projects/playlist_proxy/playlist.groovy",
+		"/Users/alapsa/projects/js-clients/main/js/general/evolution.js",
+		"/Users/alapsa/projects/js-clients/main/js/video/NativeVideo.js",
+		"/Users/alapsa/projects/playlist_proxy/jetty.groovy",
+		"/Users/alapsa/Downloads/videoInline/index.html",
+		"/Users/alapsa/Desktop/kibana.txt",
+		"/Users/alapsa/projects/html_server/video_test.html",
+		"/Users/alapsa/projects/html_server/source/html_server.js",
+		"/Users/alapsa/Desktop/Screen Shot 2015-03-18 at 10.16.35.png",
+		"/Users/alapsa/Desktop/styles.xml",
+		"/Users/alapsa/Desktop/interesting stuff.txt",
+		"/Users/alapsa/Desktop/needs-attention-out-of-work.txt",
+		"/Users/alapsa/Desktop/input.json",
+		"/private/var/folders/s8/yh_h989965j381vvg9ffrn5m0000gn/T/fz3temp-1/image.php",
+		"/private/var/folders/s8/yh_h989965j381vvg9ffrn5m0000gn/T/fz3temp-1/block.ctp",
+		"/private/var/folders/s8/yh_h989965j381vvg9ffrn5m0000gn/T/fz3temp-1/description.ctp",
+		"/Users/alapsa/Desktop/style.json",
+		"/Users/alapsa/Desktop/http request for JSON style.png",
+		"/Users/alapsa/Downloads/evo-static-mobile-5.50.4.1.rpm",
+		"/Users/alapsa/Downloads/XML Server Configuration",
+		"/etc/hosts",
+		"/Users/alapsa/Downloads/settings.xml",
+		"/Users/alapsa/Downloads/settings-2.xml",
+		"/Users/alapsa/Desktop/ReactJS.txt",
+		"/Users/alapsa/Desktop/help-css-refactor.txt",
+		"/Users/alapsa/projects/release/src/main/scala/release/Main.scala",
+		"/Users/alapsa/projects/react-tutorial/public/scripts/example.js",
+		"/Users/alapsa/Desktop/input.css",
+		"/Users/alapsa/Desktop/local.css",
+		"/Users/alapsa/Desktop/5.49 release.txt",
+		"/Users/alapsa/Desktop/build.css",
+		"/Users/alapsa/projects/js-clients/app/css-compiled/tablet/roulette/_statistics.styl",
+		"/Users/alapsa/projects/css2stylus/test.css",
+		"/Users/alapsa/projects/js-clients/main/css/phone-site.css",
+		"/Users/alapsa/projects/css2stylus/new.styl",
+		"/Users/alapsa/Desktop/changelog",
+		"/Users/alapsa/Desktop/css/phone-cardgames.css",
+		"/Users/alapsa/projects/js-clients/target/build/mobile/lobby.html",
+		"/Users/alapsa/projects/js-clients/app/css-compiled/tokens.styl",
+		"/Users/alapsa/projects/js-clients/app/css-compiled/phone-traffic_lights.styl",
+		"/Users/alapsa/projects/css2stylus/checksum.css",
+		"/Users/alapsa/projects/js-clients/app/css-compiled/phone-tokens.styl",
+		"/Users/alapsa/projects/js-clients/app/css-compiled/phone-site.styl",
+		"/Users/alapsa/projects/js-clients/app/css-compiled/phone-help.styl",
+		"/Users/alapsa/projects/js-clients/app/css-compiled/phone-cardgames.styl",
+		"/Users/alapsa/projects/css2stylus/node_modules/stylus/lib/utils.js",
+		"/Users/alapsa/projects/css2stylus/node_modules/stylus/lib/visitor/compiler.js",
+		"/Users/alapsa/projects/css2stylus/node_modules/stylus/lib/renderer.js",
+		"/Users/alapsa/projects/css2stylus/node_modules/stylus/lib/stylus.js",
+		"/Users/alapsa/Desktop/manual.styl",
+		"/Users/alapsa/projects/css2stylus/package.json",
+		"/Users/alapsa/Desktop/test.css",
+		"/Users/alapsa/Desktop/css2stylus.coffee",
+		"/usr/local/lib/node_modules/stylus/lib/visitor/compiler.js",
+		"/Users/alapsa/Desktop/auto_stylus.styl",
+		"/Users/alapsa/Desktop/manual_stylus.styl",
+		"/Users/alapsa/Desktop/release.txt",
+		"/Users/alapsa/Desktop/remember.txt",
+		"/Users/alapsa/projects/localization/resources/help-tablet/en/baccarat/index.xml",
+		"/Users/alapsa/projects/coreservices/coreservices-jetty-rpm/src/rpm/resources/run.conf",
+		"/Users/alapsa/projects/localization/resources/help-tablet/pt/blackjack/index.xml",
+		"/Users/alapsa/projects/localization/resources/help-tablet/de/blackjack/index.xml",
+		"/Users/alapsa/projects/localization/resources/help-tablet/ca/blackjack/index.xml",
+		"/Users/alapsa/projects/localization/resources/help-tablet/bg/blackjack/index.xml",
+		"/Users/alapsa/projects/js-clients/main/js/roulette/roulette.js",
+		"/Users/alapsa/projects/js-clients/node_modules/karma/lib/reporter.js",
+		"/Users/alapsa/Desktop/mobile/css/language/lang-it.css",
+		"/Users/alapsa/projects/js-clients/target/temp/css/language/lang-it.css",
+		"/Users/alapsa/Downloads/video-test.html",
+		"/Users/alapsa/Downloads/htc-one-video-debug.txt",
+		"/Users/alapsa/Downloads/TestPlayersCollectionSingleton.js",
+		"/Users/alapsa/Downloads/ios-wrapper.plist",
+		"/Users/alapsa/Downloads/AndroidVideoWrapperFixMixin.js",
+		"/Users/alapsa/projects/js-clients/test/js/testRequire.coffee",
+		"/Users/alapsa/projects/js-clients/test/js/mocks/roulette/canvasProcessor/rouletteBetProcessingLibMock.js",
+		"/Users/alapsa/projects/js-clients/main/js/general/models/phone/PhoneCardgameWinningNotificationModel.js",
+		"/Users/alapsa/projects/js-clients/main/js/baccarat/models/phone/PhoneBaccaratWinningNotificationModel.js",
+		"/Users/alapsa/projects/js-clients/test/js/roulette/observers/RouletteBetChecksSpecReq.coffee",
+		"/Users/alapsa/projects/js-clients/test/js/mocks/general/models/phone/PhoneCardgameWinningNotificationModelMock.js",
+		"/Users/alapsa/projects/js-clients/karma.conf.js",
+		"/Users/alapsa/projects/js-clients/test/js/baccarat/models/phone/PhoneBaccaratWinningNotificationModelSpecReq.coffee",
+		"/Users/alapsa/Desktop/RouletteBetChecksSpecReq.coffee",
+		"/Users/alapsa/projects/misc/harp_test/basic/default.styl",
+		"/Users/alapsa/projects/misc/harp_test/3d/index.html",
+		"/Users/alapsa/projects/misc/harp_test/3d/default.styl",
+		"/Users/alapsa/projects/misc/harp_test/index.html",
+		"/Users/alapsa/projects/misc/harp_test/default.styl",
+		"/Users/alapsa/Desktop/playlist.m3u",
+		"/Users/alapsa/Desktop/91.213.212.37.har",
+		"/Users/alapsa/projects/js-clients/app/css-compiled/tablet/roulette/_chat.styl",
+		"/Users/alapsa/Documents/modified:   main:js:lobby:LobbyMasterView.js",
+		"/Users/alapsa/projects/misc/harp_test/default.coffee",
+		"/Users/alapsa/projects/misc/harp_test/index.jade",
+		"/Users/alapsa/projects/misc/harp_test/_layout.jade",
+		"/Users/alapsa/projects/misc/test.html",
+		"/Users/alapsa/projects/misc/html_server.js",
+		"/Users/alapsa/projects/js-clients/npm-debug.log",
+		"/Users/alapsa/projects/js-clients/main/css-compiled/tablet-blackjack.css",
+		"/Users/alapsa/Desktop/unnamed.patch",
+		"/Users/alapsa/projects/js-clients/test/js/baccarat/views/tablet/TabletBaccaratGameStateViewSpecReq.coffee",
+		"/Users/alapsa/projects/js-clients/test/js/blackjack/views/tablet/TabletBlackjackGameStateViewSpecReq.coffee"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/alapsa/projects/localization",
+			"/Users/alapsa/Desktop/css",
+			"/Users/alapsa/projects/js-clients",
+			"/Users/alapsa/projects/js-clients/main/js",
+			"/Users/alapsa/projects/js-clients/test/js/baccarat",
+			"/Users/alapsa/projects/js-clients/target/build/mobile",
+			"/Users/alapsa/Downloads/Payload",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"INT-",
+			"6868",
+			"INT-7274",
+			",",
+			"[",
+			"MOB-",
+			"mob-6809",
+			"mob-6857",
+			"brand",
+			"bacc",
+			" (detail / gitweb)",
+			"(cherry (detail / gitweb)",
+			"I tend to make very subtle spelling mistakes in the sentences I write.",
+			"make very subtle spelling",
+			"make very subtle",
+			"make very",
+			"<![CDATA[21+3]]>",
+			"<![CDATA[Perfect Pairs]]>",
+			"first two cards",
+			"bet limits",
+			"first two cards",
+			"are a pair",
+			"first two cards",
+			"first two cards are a pair",
+			"player's first two cards are a pair",
+			"BET",
+			"(cherry picked ",
+			"perfect pair",
+			"payout.",
+			"payout.insurance",
+			"Actions",
+			"	\n",
+			"Actions",
+			"	\n",
+			"]",
+			"[",
+			" (detail / gitweb)",
+			"gameid",
+			"history",
+			"number",
+			"game number",
+			"Game Number",
+			"]",
+			"[",
+			" (detail / gitweb)",
+			"(detail / gitweb)",
+			"immersive-mob_med",
+			"(detail / gitweb)",
+			" (cherry (detail / gitweb)",
+			"nexus 9",
+			"xt10",
+			"nexus 9",
+			"nexus 6",
+			"will",
+			"doStuff",
+			"mob_med_hls",
+			"();\n",
+			"6151",
+			"6210",
+			"5450",
+			"6456",
+			"6585",
+			"]",
+			"[",
+			" (detail / gitweb)",
+			"Actions",
+			"	",
+			"alert",
+			"pagehide",
+			"main/js/",
+			"mobref",
+			":.*",
+			":define(function (require) {",
+			"blur",
+			"focus",
+			"http://134.213.153.141:1935/casino/roulette/amlst:roulette_virtual-mob_med_hls/manifest.mpd",
+			" (detail / gitweb)",
+			">",
+			"target-",
+			" (details)",
+			"]",
+			"[",
+			"requestAnimationFrame",
+			"1",
+			"	<",
+			",",
+			"_quot_urls_quot_",
+			"phantom",
+			"]",
+			"[",
+			" —",
+			"MOB-3274",
+			"Merge branch",
+			"]",
+			"[",
+			" (detail / gitweb)",
+			"evaluating 'E.tokensPanel.get'",
+			"load",
+			"http",
+			" ",
+			"addEventListener",
+			"play",
+			">",
+			"function ()",
+			"encrypted",
+			"	",
+			"emptied",
+			"durationchange",
+			"canplaythrough",
+			"canplay",
+			"abort",
+			"\"\n",
+			"[",
+			" (detail / gitweb)",
+			"5.50.4.1",
+			"(detail / gitweb)",
+			".",
+			"“",
+			"@",
+			"\\n    ",
+			"\"\\n    ",
+			"MOB-5984",
+			"    ",
+			"=",
+			">",
+			"<",
+			"</",
+			"]"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\]",
+			"\\[",
+			"",
+			"6730",
+			"6724",
+			"6723",
+			"\\]",
+			"\\[",
+			"",
+			"\\]",
+			"\\[",
+			"",
+			"\\]",
+			"\\[",
+			"",
+			"\\n* ",
+			"\\]",
+			"\\[",
+			"",
+			"MOB-5899",
+			"\\n- ",
+			"\\n - ",
+			"\\]",
+			"\\[",
+			"\\1 \\2",
+			"\\}\\n",
+			"}\\n",
+			"",
+			"\\]",
+			"\\[",
+			"",
+			"<span></span>",
+			"&",
+			"><",
+			"\"",
+			"url(\"$1\")",
+			"url(\"$0\")",
+			"url(\"$1\")",
+			"url(\"\\1\")",
+			"url(\"\\0\")",
+			"<?id3>",
+			"<?id2>",
+			"<?id1>",
+			"<gmeid>",
+			"<plyid>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/main.coffee",
+					"settings":
+					{
+						"buffer_size": 245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/models/renderer.coffee",
+					"settings":
+					{
+						"buffer_size": 1129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"model",
+				"source/models/renderer.coffee"
+			],
+			[
+				"main",
+				"source/main.coffee"
+			],
+			[
+				"",
+				"/Users/alapsa/Desktop/css2stylus.coffee"
+			],
+			[
+				"tablet/pt/black",
+				"resources/help-tablet/pt/blackjack/index.xml"
+			],
+			[
+				"tablet/de/bj/",
+				"resources/help-tablet/de/blackjack/index.xml"
+			],
+			[
+				"tablet/ca/blacj",
+				"resources/help-tablet/ca/blackjack/index.xml"
+			],
+			[
+				"tablet/bg/black",
+				"resources/help-tablet/bg/blackjack/index.xml"
+			],
+			[
+				"roulette.js",
+				"main/js/roulette/roulette.js"
+			],
+			[
+				"phonebaccaratwinningnotificationmodel",
+				"main/js/baccarat/models/phone/PhoneBaccaratWinningNotificationModel.js"
+			],
+			[
+				"general/models/phone/phonecardgamewinningnotificationmodel",
+				"main/js/general/models/phone/PhoneCardgameWinningNotificationModel.js"
+			],
+			[
+				"testrequir",
+				"test/js/testRequire.coffee"
+			],
+			[
+				"/mocks/roulette/canvasprocessor/roulettebetprocessinglibmock",
+				"test/js/mocks/roulette/canvasProcessor/rouletteBetProcessingLibMock.js"
+			],
+			[
+				"js/mocks/general/models/phone/phonecardgamewinningnotificationmodelmock",
+				"test/js/mocks/general/models/phone/PhoneCardgameWinningNotificationModelMock.js"
+			],
+			[
+				"roulettebetcheckspec",
+				"test/js/roulette/observers/RouletteBetChecksSpecReq.coffee"
+			],
+			[
+				"karm",
+				"karma.conf.js"
+			],
+			[
+				"baccarat/models/phone/phonebaccaratwinningnotificationmodel",
+				"main/js/baccarat/models/phone/PhoneBaccaratWinningNotificationModel.js"
+			],
+			[
+				"test/baccarat/model",
+				"test/js/baccarat/models/phone/PhoneBaccaratWinningNotificationModelSpecReq.coffee"
+			],
+			[
+				"tablet-card",
+				"app/css-compiled/tablet-cardgames.styl"
+			],
+			[
+				"tablet-bacc",
+				"app/css-compiled/tablet-baccarat.styl"
+			],
+			[
+				"tablet-cardgame",
+				"app/css-compiled/tablet-cardgames.styl"
+			],
+			[
+				"tablet-help.styl",
+				"app/css-compiled/tablet-help.styl"
+			],
+			[
+				"roulette/stat.styl",
+				"app/css-compiled/tablet/roulette/_statistics.styl"
+			],
+			[
+				"_chat",
+				"app/css-compiled/tablet/roulette/_chat.styl"
+			],
+			[
+				"karma",
+				"karma.conf.js"
+			],
+			[
+				"phonebjgamestateviewspec",
+				"test/js/blackjack/views/phone/PhoneBlackjackGameStateViewSpecReq.coffee"
+			],
+			[
+				"tabletbjgamestateview",
+				"main/js/blackjack/views/tablet/TabletBlackjackGameStateView.js"
+			],
+			[
+				"tabletgamestateviewspec",
+				"test/js/blackjack/views/tablet/TabletBlackjackGameStateViewSpecReq.coffee"
+			],
+			[
+				"bjgamestateviewspec",
+				"test/js/blackjack/views/BlackjackGameStateViewSpecReq.coffee"
+			],
+			[
+				"tabletgamestatespec",
+				"test/js/baccarat/views/tablet/TabletBaccaratGameStateViewSpecReq.coffee"
+			],
+			[
+				"bjgstview",
+				"main/js/blackjack/views/BlackjackGameStateView.js"
+			],
+			[
+				"blackjackgamestateviespec",
+				"test/js/blackjack/views/BlackjackGameStateViewSpecReq.coffee"
+			],
+			[
+				"test/baccarat/tabletbetspotview",
+				"test/js/baccarat/views/tablet/TabletBaccaratBetSpotViewSpecReq.coffee"
+			],
+			[
+				"test/roulettewinnnspecreqcoffee",
+				"test/js/roulette/RouletteWinningIndicatorVideoViewSpecReq.coffee"
+			],
+			[
+				"phonebacaratbetspotview",
+				"main/js/baccarat/views/phone/PhoneBaccaratBetSpotView.js"
+			],
+			[
+				"tabletbaccaratbetspotvie",
+				"main/js/baccarat/views/tablet/TabletBaccaratBetSpotView.js"
+			],
+			[
+				"testbjcardview",
+				"test/js/blackjack/views/BlackjackCardViewSpecReq.coffee"
+			],
+			[
+				"blackjackcardview",
+				"main/js/blackjack/views/BlackjackCardView.js"
+			],
+			[
+				"bc/betspotmodel",
+				"main/js/baccarat/models/BaccaratBetSpotModel.js"
+			],
+			[
+				"bjcardcollecview",
+				"main/js/blackjack/views/BlackjackCardCollectionView.js"
+			],
+			[
+				"statistics.styl",
+				"app/css-compiled/tablet/roulette/_statistics.styl"
+			],
+			[
+				"blackjack.styl",
+				"app/css-compiled/tablet-blackjack.styl"
+			],
+			[
+				"tablet-blackjack",
+				"main/css-compiled/tablet-blackjack.css"
+			],
+			[
+				"tabletblackjack.css",
+				"main/css-compiled/tablet-blackjack.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 228.0,
+	"status_bar_visible": true
+}

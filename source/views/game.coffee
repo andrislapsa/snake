@@ -7,7 +7,7 @@ define (require) ->
 	class GameView extends Backbone.View
 
 		events:
-			'keydown': 'changeSnakeDirection'
+			'keydown': 'storeDirectionKeyStrokes'
 			'blur': 'pause'
 			'focus': 'unpause'
 
@@ -26,17 +26,31 @@ define (require) ->
 				model: snakeModel
 				renderer: rendererView
 
-			@speed = 100
+			@speed = 200
+
+			@keystrokes = []
 
 			@unpause()
 
-		changeSnakeDirection: (e) ->
-			@snake.model.changeDirection e.keyCode
+		storeDirectionKeyStrokes: (e) ->
+			KEY_BINDINGS =
+				37: 'left'
+				38: 'up'
+				39: 'right'
+				40: 'down'
+
+			return if !KEY_BINDINGS[e.keyCode]
+
+			@keystrokes.push KEY_BINDINGS[e.keyCode]
+			@keystrokes = @keystrokes.splice 0, 2
+			console.log 'keystrokes', @keystrokes
 
 		loop: =>
 			if !@loopTimer
 				@loopTimer = setInterval @loop, @speed
 
+			if @keystrokes.length
+				@snake.model.changeDirection @keystrokes.shift()
 			@snake.model.move()
 			@snake.render()
 
