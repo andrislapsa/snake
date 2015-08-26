@@ -27,8 +27,20 @@ define (require) ->
 		eraseTail: ->
 			@get('body').shift()
 
-		changeDirection: (direction) ->
-			@set 'direction', direction
+		isValidDirectionChange: (oldDirection, newDirection) ->
+			invalidChanges =
+				left: "right"
+				up: "down"
+				right: "left"
+				down: "up"
+
+			return invalidChanges[newDirection] != oldDirection
+
+		changeDirection: (newDirection) ->
+			oldDirection = @get 'direction'
+
+			if @isValidDirectionChange oldDirection, newDirection
+				@set 'direction', newDirection
 
 		move: ->
 			position = @get 'position'
