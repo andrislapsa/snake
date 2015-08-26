@@ -16,6 +16,7 @@ define (require) ->
 
 			@drawHorizontalPieceAsset()
 			@drawVerticalPieceAsset()
+			@drawFoodAsset()
 
 			@drawingFirstPiece = true
 
@@ -38,6 +39,26 @@ define (require) ->
 				@size.width - 1
 				@size.height
 			)
+
+		drawFoodAsset: ->
+			position = @model.allocateAsset 'food', @size
+			path = new Path2D()
+			radius = @size.width / 2
+			position.x += radius
+			position.y += radius
+			startAngle = 0
+			endAngle = Math.PI * 2
+
+			path.arc(
+				position.x,
+				position.y,
+				radius,
+				startAngle,
+				endAngle
+			)
+
+			@assetsContext.fillStyle = 'red'
+			@assetsContext.fill path
 
 		drawHead: (params) ->
 			orientation = if ['up', 'down'].indexOf(params.direction) > -1 then 'vertical' else 'horizontal'

@@ -26,7 +26,7 @@ define (require) ->
 				model: snakeModel
 				renderer: rendererView
 
-			@speed = 200
+			@speed = 100
 
 			@keystrokes = []
 
