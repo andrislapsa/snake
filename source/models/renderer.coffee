@@ -14,6 +14,12 @@ define (require) ->
 				width: size.width / 50
 				height: size.height / 50
 
+		calculateGridBoundaries: (size) ->
+			return {
+				width: (size.width / @gridSize.width) - 1
+				height: (size.height / @gridSize.height) - 1
+			}
+
 		calculateGridToPixels: (gridPosition) ->
 			return {
 				x: gridPosition.x * @gridSize.width

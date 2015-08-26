@@ -7,16 +7,16 @@ define (require) ->
 			@renderer = params.renderer
 
 		render: ->
-			head = @model.getHead()
+			head = @model.getHeadPosition()
 
-			if @model.get('body').length > 20
+			if @model.get('body').length > @model.get('bodySize')
 				tail = @model.eraseTail()
 				
-				@renderer.clearTail
+				@renderer.clearPosition
 					x: tail.x
 					y: tail.y
 
-			# @model.logBody()
+			@model.logBody()
 
 			@renderer.drawHead
 				x: head.x

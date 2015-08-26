@@ -10,7 +10,11 @@ define (require) ->
 
 			@model = new RendererModel
 
-			@size = @model.calculateGridSize
+			@gridSize = @model.calculateGridSize
+				width: @gameContext.canvas.width
+				height: @gameContext.canvas.height
+
+			@gridBoundaries = @model.calculateGridBoundaries
 				width: @gameContext.canvas.width
 				height: @gameContext.canvas.height
 
@@ -21,37 +25,35 @@ define (require) ->
 			@drawingFirstPiece = true
 
 		drawHorizontalPieceAsset: ->
-			position = @model.allocateAsset 'horizontalPiece', @size
+			position = @model.allocateAsset 'horizontalPiece', @gridSize
 
 			@assetsContext.fillRect(
 				position.x
 				position.y
-				@size.width
-				@size.height - 1
+				@gridSize.width
+				@gridSize.height - 1
 			)
 
 		drawVerticalPieceAsset: ->
-			position = @model.allocateAsset 'verticalPiece', @size
+			position = @model.allocateAsset 'verticalPiece', @gridSize
 
 			@assetsContext.fillRect(
 				position.x
 				position.y
-				@size.width - 1
-				@size.height
+				@gridSize.width - 1
+				@gridSize.height
 			)
 
 		drawFoodAsset: ->
-			position = @model.allocateAsset 'food', @size
+			position = @model.allocateAsset 'food', @gridSize
 			path = new Path2D()
-			radius = @size.width / 2
-			position.x += radius
-			position.y += radius
+			radius = @gridSize.width / 2
 			startAngle = 0
 			endAngle = Math.PI * 2
 
 			path.arc(
-				position.x,
-				position.y,
+				position.x + radius,
+				position.y + radius,
 				radius,
 				startAngle,
 				endAngle
@@ -78,11 +80,27 @@ define (require) ->
 				pieceData.size.height
 				destinationPosition.x
 				destinationPosition.y
-				@size.width
-				@size.height
+				@gridSize.width
+				@gridSize.height
 			)
 
-		clearTail: (params) ->
+		drawFood: (params) ->
+			params = @model.calculateGridToPixels params
+			asset = @model.getAsset "food"
+
+			@gameContext.drawImage(
+				@assetsContext.canvas
+				asset.position.x
+				asset.position.y
+				asset.size.width
+				asset.size.height
+				params.x
+				params.y
+				@gridSize.width
+				@gridSize.height
+			)
+
+		clearPosition: (params) ->
 			destinationPosition = @model.calculateGridToPixels
 				x: params.x
 				y: params.y
@@ -90,6 +108,6 @@ define (require) ->
 			@gameContext.clearRect(
 				destinationPosition.x
 				destinationPosition.y
-				@size.width
-				@size.height
+				@gridSize.width
+				@gridSize.height
 			)

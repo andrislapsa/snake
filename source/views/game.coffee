@@ -3,6 +3,9 @@ define (require) ->
 	RendererView = require 'views/renderer'
 	SnakeView = require 'views/snake'
 	SnakeModel = require 'models/snake'
+	ColliderModel = require 'models/collider'
+	FoodView = require 'views/food'
+	FoodModel = require 'models/food'
 
 	class GameView extends Backbone.View
 
@@ -16,11 +19,23 @@ define (require) ->
 				assetsContext: @el.document.querySelector('#assets').getContext '2d'
 				gameContext: @el.document.querySelector('#game').getContext '2d'
 
+			window.rendererView = rendererView
+
+			@collider = new ColliderModel()
+
+			foodModel = new FoodModel
+				gridBoundaries: rendererView.gridBoundaries
+
+			@food = new FoodView
+				model: foodModel
+				renderer: rendererView
+
 			snakeModel = new SnakeModel
 				position:
 					x: 20
 					y: 20
 				direction: 'down'
+				bodySize: 5
 
 			@snake = new SnakeView
 				model: snakeModel
@@ -52,6 +67,12 @@ define (require) ->
 			if @keystrokes.length
 				@snake.model.changeDirection @keystrokes.shift()
 			@snake.model.move()
+
+			if @collider.positionsMatch @snake.model.getHeadPosition(), @food.model.getPosition()
+				@food.erase()
+				@snake.model.grow()
+				@food.spawn()
+
 			@snake.render()
 
 		pause: =>

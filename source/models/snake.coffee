@@ -5,13 +5,20 @@ define (require) ->
 	class SnakeModel extends Backbone.Model
 
 		initialize: (params) ->
+			@set 'bodySize', params.bodySize
 			@set 'position', params.position
 			@set 'body', []
 
-		grow: (section) ->
+		grow: ->
+			oldBodySize = @get 'bodySize'
+			@set 'bodySize', oldBodySize + 1 
+
+		appendBody: (section) ->
+			position = @get 'position'
+
 			@get('body').push
-				x: section.x
-				y: section.y
+				x: position.x
+				y: position.y
 
 		logBody: ->
 			body = @get 'body'
@@ -21,8 +28,8 @@ define (require) ->
 
 			console.log results
 
-		getHead: ->
-			_.last @get('body')
+		getHeadPosition: ->
+			@get 'position'
 
 		eraseTail: ->
 			@get('body').shift()
@@ -52,6 +59,6 @@ define (require) ->
 				when 'right' then position.x++
 				when 'down' then position.y++
 
-			@grow position
-
 			@set 'position', position
+
+			@appendBody position
