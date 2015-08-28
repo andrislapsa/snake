@@ -21,7 +21,8 @@ define (require) ->
 
 			window.rendererView = rendererView
 
-			@collider = new ColliderModel()
+			@collider = new ColliderModel
+				gridBoundaries: rendererView.gridBoundaries
 
 			foodModel = new FoodModel
 				gridBoundaries: rendererView.gridBoundaries
@@ -68,12 +69,22 @@ define (require) ->
 				@snake.model.changeDirection @keystrokes.shift()
 			@snake.model.move()
 
-			if @collider.positionsMatch @snake.model.getHeadPosition(), @food.model.getPosition()
+			snakeHeadPosition = @snake.model.getHeadPosition()
+
+			if @collider.positionsMatch snakeHeadPosition, @food.model.getPosition()
 				@food.erase()
 				@snake.model.grow()
 				@food.spawn()
 
-			@snake.render()
+			outOfBounds = @collider.positionOutOfBounds snakeHeadPosition
+			crashedIntoSelf = @collider.positionInArray snakeHeadPosition, @snake.model.get('body')
+			died = outOfBounds or crashedIntoSelf
+
+			if died
+				@snake.model.die()
+				@pause()
+			else
+				@snake.render()
 
 		pause: =>
 			clearTimeout @loopTimer

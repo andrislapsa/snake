@@ -62,3 +62,6 @@ define (require) ->
 			@set 'position', position
 
 			@appendBody position
+
+		die: ->
+			console.log "am ded"
