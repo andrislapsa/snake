@@ -5,6 +5,7 @@ define (require) ->
 
 		initialize: (params) ->
 			@gridBoundaries = params.gridBoundaries
+			@snakeModel = params.snakeModel
 
 		getRandomLocation: ->
 			return {
@@ -12,10 +13,13 @@ define (require) ->
 				y: Math.floor(Math.random() * @gridBoundaries.height)
 			}
 
-		# TODO: shouldn't be completely random position, we don't want to spawn food on snake
 		spawn: ->
-			@set 'position', @getRandomLocation()
-			console.log "spawned at", @getPosition()
+			loop
+				randomLocation = @getRandomLocation()
+				if !@snakeModel.positionIsInSnakeBody(randomLocation)
+					break
+
+			@set 'position', randomLocation
 
 		getPosition: ->
 			return @get 'position'
