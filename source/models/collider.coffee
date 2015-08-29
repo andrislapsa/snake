@@ -18,4 +18,8 @@ define (require) ->
 				return true
 
 		positionInArray: (position, array) ->
-			
+			for item in array
+				if @positionsMatch position, item
+					return true
+
+			return false

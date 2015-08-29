@@ -5,6 +5,7 @@ define (require) ->
 	class SnakeModel extends Backbone.Model
 
 		initialize: (params) ->
+			@collider = params.collider
 			@set 'bodySize', params.bodySize
 			@set 'position', params.position
 			@set 'body', []
@@ -30,6 +31,9 @@ define (require) ->
 
 		getHeadPosition: ->
 			@get 'position'
+
+		getBodyWithoutHead: ->
+			_.initial(@get 'body')
 
 		eraseTail: ->
 			@get('body').shift()
@@ -62,6 +66,20 @@ define (require) ->
 			@set 'position', position
 
 			@appendBody position
+
+		positionIsInSnakeBody: (position) ->
+			return @collider.positionInArray position, @getBodyWithoutHead()
+
+		isAtValidPosition: ->
+			snakeHeadPosition = @getHeadPosition()
+
+			if @collider.positionOutOfBounds snakeHeadPosition
+				return false
+
+			if @positionIsInSnakeBody snakeHeadPosition
+				return false
+
+			return true
 
 		die: ->
 			console.log "am ded"

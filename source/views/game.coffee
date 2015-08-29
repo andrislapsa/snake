@@ -24,22 +24,24 @@ define (require) ->
 			@collider = new ColliderModel
 				gridBoundaries: rendererView.gridBoundaries
 
-			foodModel = new FoodModel
-				gridBoundaries: rendererView.gridBoundaries
-
-			@food = new FoodView
-				model: foodModel
-				renderer: rendererView
-
 			snakeModel = new SnakeModel
 				position:
 					x: 20
 					y: 20
 				direction: 'down'
 				bodySize: 5
+				collider: @collider
 
 			@snake = new SnakeView
 				model: snakeModel
+				renderer: rendererView
+
+			foodModel = new FoodModel
+				gridBoundaries: rendererView.gridBoundaries
+				snakeModel: snakeModel
+
+			@food = new FoodView
+				model: foodModel
 				renderer: rendererView
 
 			@speed = 100
@@ -76,9 +78,7 @@ define (require) ->
 				@snake.model.grow()
 				@food.spawn()
 
-			outOfBounds = @collider.positionOutOfBounds snakeHeadPosition
-			crashedIntoSelf = @collider.positionInArray snakeHeadPosition, @snake.model.get('body')
-			died = outOfBounds or crashedIntoSelf
+			died = !@snake.model.isAtValidPosition()
 
 			if died
 				@snake.model.die()
