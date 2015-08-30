@@ -6,6 +6,7 @@ define (require) ->
 
 		initialize: (params) ->
 			@collider = params.collider
+			@canTeleport = true
 			@set 'bodySize', params.bodySize
 			@set 'position', params.position
 			@set 'body', []
@@ -63,9 +64,27 @@ define (require) ->
 				when 'right' then position.x++
 				when 'down' then position.y++
 
+			if @canTeleport && @collider.positionOutOfBounds position
+				position = @teleport position
+
 			@set 'position', position
 
 			@appendBody position
+
+		teleport: (position) ->
+			if position.x > @collider.bounds.width
+				position.x = 0
+			
+			if position.y > @collider.bounds.height
+				position.y = 0
+
+			if position.x < 0
+				position.x = @collider.bounds.width
+			
+			if position.y < 0
+				position.y = @collider.bounds.height
+
+			return position
 
 		positionIsInSnakeBody: (position) ->
 			return @collider.positionInArray position, @getBodyWithoutHead()
@@ -73,7 +92,7 @@ define (require) ->
 		isAtValidPosition: ->
 			snakeHeadPosition = @getHeadPosition()
 
-			if @collider.positionOutOfBounds snakeHeadPosition
+			if !@canTeleport && @collider.positionOutOfBounds snakeHeadPosition
 				return false
 
 			if @positionIsInSnakeBody snakeHeadPosition
